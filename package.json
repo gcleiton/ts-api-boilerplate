@@ -4,5 +4,8 @@
   "description": "A personal boilerplate that I use in my Node APIs with Typescript",
   "author": "Gabriel Cleiton <ccgabrielcc2609@gmail.com>",
   "repository": "https://github.com/gcleiton/ts-api-boilerplate.git",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.2.6"
+  }
 }
