@@ -1,5 +1,6 @@
 {
-  "*.{ts, tsx}": [
-    "yarn lint"
+  "*.ts": [
+    "yarn lint",
+    "yarn test:staged"
   ]
 }

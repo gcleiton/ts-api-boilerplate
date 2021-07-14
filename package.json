@@ -6,9 +6,15 @@
   "repository": "https://github.com/gcleiton/ts-api-boilerplate.git",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint src --max-warnings=0 --fix"
+    "lint": "eslint src --max-warnings=0 --fix",
+    "test": "jest --passWithNoTests --runInBand --no-cache",
+    "test:unit": "yarn test --watch -c jest-unit.config.js",
+    "test:integration": "yarn test --watch -c jest-integration.config.js",
+    "test:staged": "yarn test --findRelatedTests",
+    "test:ci": "yarn test --coverage"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.24",
     "@types/node": "^16.3.2",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "eslint": "^7.30.0",
@@ -20,8 +26,10 @@
     "eslint-plugin-promise": "^5.1.0",
     "git-commit-msg-linter": "^3.2.6",
     "husky": "^7.0.1",
+    "jest": "^27.0.6",
     "lint-staged": "^11.0.1",
     "prettier": "^2.3.2",
+    "ts-jest": "^27.0.3",
     "typescript": "^4.3.5"
   }
 }
