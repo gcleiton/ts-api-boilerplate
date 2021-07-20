@@ -5,15 +5,14 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDirs": ["src", "tests"],
     "baseUrl": "src",
     "paths": {
+      "@/tests/*": ["../tests/*"],
       "@/*": ["*"]
     },
     "strict": true
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src", "tests"],
   "exclude": []
 }
