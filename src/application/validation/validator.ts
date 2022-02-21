@@ -7,7 +7,7 @@ export abstract class Validator {
     const rules = this.buildRules(request)
     const errors = []
     for (const rule of rules) {
-      const error = rule.validate()
+      const error = rule.passes()
       if (error) {
         errors.push(error)
       }

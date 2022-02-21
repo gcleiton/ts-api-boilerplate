@@ -17,9 +17,9 @@ describe('Validator', () => {
 
   beforeAll(() => {
     rule1 = mock()
-    rule1.validate.mockReturnValue(undefined)
+    rule1.passes.mockReturnValue(undefined)
     rule2 = mock()
-    rule2.validate.mockReturnValue(undefined)
+    rule2.passes.mockReturnValue(undefined)
     rules = [rule1, rule2]
   })
 
@@ -37,7 +37,7 @@ describe('Validator', () => {
   })
 
   it('should return errors if any rule broken', () => {
-    rule2.validate.mockReturnValueOnce(new Error('error_2'))
+    rule2.passes.mockReturnValueOnce(new Error('error_2'))
 
     const errors = sut.validate({
       key: 'any_value'

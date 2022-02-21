@@ -1,3 +1,3 @@
 export interface Rule {
-  validate: () => Error | undefined
+  passes: () => Error | undefined
 }

@@ -5,7 +5,7 @@ describe('RequiredRule', () => {
   it('should return RequiredFieldError if value is null', () => {
     const sut = new RequiredRule(null, 'any_field')
 
-    const error = sut.validate()
+    const error = sut.passes()
 
     expect(error).toEqual(new RequiredFieldError('any_field'))
   })
@@ -13,7 +13,7 @@ describe('RequiredRule', () => {
   it('should return RequiredFieldError if value is undefined', () => {
     const sut = new RequiredRule(undefined, 'any_field')
 
-    const error = sut.validate()
+    const error = sut.passes()
 
     expect(error).toEqual(new RequiredFieldError('any_field'))
   })
@@ -21,7 +21,7 @@ describe('RequiredRule', () => {
   it('should return undefined if value is not empty', () => {
     const sut = new RequiredRule('any_value', 'any_field')
 
-    const error = sut.validate()
+    const error = sut.passes()
 
     expect(error).toBeUndefined()
   })
@@ -37,7 +37,7 @@ describe('RequiredStringRule', () => {
   it('should return RequiredFieldError if value is empty', () => {
     const sut = new RequiredStringRule('', 'any_field')
 
-    const error = sut.validate()
+    const error = sut.passes()
 
     expect(error).toEqual(new RequiredFieldError('any_field'))
   })
@@ -45,7 +45,7 @@ describe('RequiredStringRule', () => {
   it('should return undefined if value is not empty', () => {
     const sut = new RequiredStringRule('any_value', 'any_field')
 
-    const error = sut.validate()
+    const error = sut.passes()
 
     expect(error).toBeUndefined()
   })
