@@ -5,7 +5,7 @@ export class RequiredRule implements Rule {
   constructor(readonly value: any, readonly fieldName: string) {}
 
   validate(): Error | undefined {
-    if (this.value === null) {
+    if (this.value === null || this.value === undefined) {
       return new RequiredFieldError(this.fieldName)
     }
   }
