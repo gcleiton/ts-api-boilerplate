@@ -1,5 +1,5 @@
 import { Rule } from '@application/contracts'
-import { RequiredRule, RequiredStringRule } from '@application/rules'
+import { RequiredRule, RequiredStringRule } from '@application/validation/rules'
 
 type OfInput = {
   value: any

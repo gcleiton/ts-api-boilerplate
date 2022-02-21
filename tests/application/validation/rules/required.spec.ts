@@ -1,5 +1,5 @@
 import { RequiredFieldError } from '@application/errors'
-import { RequiredRule, RequiredStringRule } from '@application/rules'
+import { RequiredRule, RequiredStringRule } from '@application/validation/rules'
 
 describe('RequiredRule', () => {
   it('should return RequiredFieldError if value is null', () => {

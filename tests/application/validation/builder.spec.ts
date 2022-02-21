@@ -1,4 +1,4 @@
-import { RequiredRule, RequiredStringRule } from '@application/rules'
+import { RequiredRule, RequiredStringRule } from '@application/validation/rules'
 import { ValidationBuilder } from '@application/validation'
 
 describe('ValidationBuilder', () => {
