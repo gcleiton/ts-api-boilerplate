@@ -1,5 +1,5 @@
 import { RequiredFieldError } from '@application/errors'
-import { RequiredRule } from '@application/rules'
+import { RequiredRule, RequiredStringRule } from '@application/rules'
 
 describe('RequiredRule', () => {
   it('should return RequiredFieldError if value is null', () => {
@@ -24,5 +24,13 @@ describe('RequiredRule', () => {
     const error = sut.validate()
 
     expect(error).toBeUndefined()
+  })
+})
+
+describe('RequiredStringRule', () => {
+  it('should extend RequiredRule', () => {
+    const sut = new RequiredStringRule('any_value', 'any_field')
+
+    expect(sut).toBeInstanceOf(RequiredRule)
   })
 })

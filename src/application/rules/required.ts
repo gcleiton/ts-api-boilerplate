@@ -10,3 +10,12 @@ export class RequiredRule implements Rule {
     }
   }
 }
+
+export class RequiredStringRule extends RequiredRule {
+  constructor(
+    override readonly value: any,
+    override readonly fieldName: string
+  ) {
+    super(value, fieldName)
+  }
+}
