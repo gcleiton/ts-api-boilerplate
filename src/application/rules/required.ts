@@ -18,4 +18,11 @@ export class RequiredStringRule extends RequiredRule {
   ) {
     super(value, fieldName)
   }
+
+  override validate(): Error | undefined {
+    const error = super.validate()
+    if (error !== undefined || this.value === '') {
+      return new RequiredFieldError(this.fieldName)
+    }
+  }
 }

@@ -33,4 +33,12 @@ describe('RequiredStringRule', () => {
 
     expect(sut).toBeInstanceOf(RequiredRule)
   })
+
+  it('should return RequiredFieldError if value is empty', () => {
+    const sut = new RequiredStringRule('', 'any_field')
+
+    const error = sut.validate()
+
+    expect(error).toEqual(new RequiredFieldError('any_field'))
+  })
 })
